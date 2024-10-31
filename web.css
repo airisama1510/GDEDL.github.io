@@ -98,6 +98,6 @@ li a:hover:not(.active) {
   transition: 0.5s;
 }
 
-.active {
+.bactive {
   background-color:#007a9f;
 }

@@ -1,20 +1,108 @@
 <!DOCTYPE html>
 <html>
     <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            .accordion {
+              background-color: #1d1d1d;
+              color: #ffffff;
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: center;
+              outline: none;
+              font-size: 24px;
+              transition: 0.4s;
+            }
+            
+            .active, .accordion:hover {
+              background-color: #3b3b3b;
+            }
+            .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            }
+
+            .active:after {
+            content: "\2212";
+            }
+            
+            .panel {
+              padding: 0 18px;
+              background-color: #3b3b3b;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.5s ease-out;
+            }
+            </style>
         <link rel="stylesheet" href="web.css">
         <title>GDEDL</title>
     </head>
     <body>
-        <br><br>
-        <i><h1>GDEDL (Geometry Dash Editor Demon List)</h1></i>
-        <h2>Main list:</h2>
-        <a href="no1.html"><button class="button" style="vertical-align:middle"><span> #1 Wasureta </span></button></a>
-        <a href="no2.html"><button class="button" style="vertical-align:middle;font-size: x-large;"><span> #2 iSpyWithMyLittleEye </span></button></a>
+        <br>
+        <br>
+            <i><h1>GDEDL (Geometry Dash Editor Demon List)</h1></i>
+            <h2>Main list:</h2>
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+                            <button class="accordion">#1 Wasureta</button>
+                    <div class="panel">
+                        <h1> Wasureta </h1>
+                        <h2>Created by: HelpagasuS<br>
+                            Verifier: goldix<br>
+                            ID: 64658786 <br>
+                            Points when completed: 220pt<br>
+                            <br>
+                            <iframe src="https://www.youtube.com/embed/jeAALZXGZs8"></iframe>
+                        </h2>
+                        <p>Records:<br>
+                            52% or better to qualify
+                        </p>
+                    </div>
+                    <button class="accordion">#2 iSpyWithMyLittleEye</button>
+                    <div class="panel">
+                        <title>iSpyWithMyLittleEye</title>
+                        <h1> iSpyWithMyLittleEye </h1>
+                        <h2>Created by: Voxicat<br>
+                            Verifier: p0123<br>
+                            ID: 89886591<br>
+                            Points when completed: 10pt<br>
+                            <br>
+                            <iframe src="https://youtube.com/embed/aZLjjQ0ZbKA"></iframe>
+                        </h2>
+                        <p>Records:<br>
+                            100% or better to qualify
+                        </p>
+                    </div>
+/*------------------------------------------------------------------------------------------------------------------------------------*/
         <ul>
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a class="bactive" href="index.html">Home</a></li>
             <li><a href="Rules.html">Rules</a></li>
-            <li style="float:right"><a href="https://discord.gg/QcSH62we">Submit Records</a></li>
+            <li><a href="Lb.html">Leaderboard</a></li>
+            <li style="float:right"><a href="https://discord.gg/A9MXKXjj">Submit Records</a></li>
         </ul>
           <br>
-          <p style="color: #ffffff75;">Web made by: airisama(p0123)</p>
+
+
+
+          <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+          <p style="color: #ffffff75;">Web made by: airisama(p0123)</p>   
 </html>
